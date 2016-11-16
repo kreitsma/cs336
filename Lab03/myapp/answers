@@ -1,0 +1,8 @@
+1. Node.js is designed to be a platform to run JavaScript application on the server side; Express.js is based on Node.js and is a framework that provides features for applications.
+
+2. package.json contains data regarding your application, the most important piece being the list of dependencies it needs from npm when npm install is run.
+
+
+1. The files are static in that they are not being created dynamically by the server side.
+
+2. It no longer displays 'Hello, World'; this is because the message sent by app.js is overridden by the explicit request for the text file entered in the URL.   
