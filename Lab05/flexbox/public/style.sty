@@ -1,0 +1,75 @@
+main-margins = 0px
+main-padding = 20px
+nav-aside-flex = 1 6 20%
+nav-aside-color = #ccccff
+min-max-height = 120px
+header-footer-height = 100px
+header-footer-color = #ffeebb
+borders = 1px solid black
+
+body
+	font: 36px Helvetica
+	background: #999999
+
+	#main 
+		min-height: 800px
+		margin: main-margins
+		padding: main-margins
+		display: flex
+		flex-flow: row
+
+	#main > article 
+		padding: main-padding
+		border: borders
+		background: #dddd88
+		flex 3 1 60%
+		order 2
+
+	#main > nav
+		text-align: right
+		padding: main-padding
+		border: borders
+		background: nav-aside-color
+		flex: nav-aside-flex
+		order 1
+
+	#main > aside 
+		padding: main-padding
+		border: borders
+		background: nav-aside-color
+		flex: nav-aside-flex
+		order 3
+ 
+	header
+		font-size: 150%
+		display: block
+		padding: main-padding
+		min-height: header-footer-height
+		border: borders
+		background: header-footer-color
+
+	footer
+		font-size: 50%
+		display: block
+		padding: main-padding
+		min-height: header-footer-height
+		border: borders
+		background: header-footer-color
+ 
+	/* Too narrow to support three columns */
+	@media all and (max-width: 640px) 
+		#main, #page 
+			flex-direction: column
+   
+
+		#main > article, #main > nav, #main > aside 
+		/* Return them to document order */
+			order 0
+   
+  
+		#main > nav, #main > aside, header, footer 
+			min-height: min-max-height
+			max-height: min-max-height
+   
+		#main > nav 
+			text-align: left
