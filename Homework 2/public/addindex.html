@@ -1,0 +1,34 @@
+<!--
+     author: kreitsma
+     cs336, 10/28/2016
+   -->
+<html>
+    <head>
+		<meta charset="utf-8">
+		<title>Homework 2</title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="style.css" />
+		<script src="//code.jquery.com/jquery-latest.js"></script>
+       <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+       <form action="/addperson" method="post">
+          <div>
+				<label for="firstname">First Name:</label>
+					<input type="text" id="firstname" name="user_firstname" placeholder="First name">
+          </div>
+			<div>
+				<label for="lastname">Last Name:</label>
+					<input type="text" id="lastname" name="user_lastname"  placeholder="Last name">
+          </div>
+			<div>
+				<label for="birthdate">Start Date:</label>
+					<input type="text" id="startdate" name="user_startdate" placeholder="YYYY/MM/DD">
+          </div>
+          <div class="button">
+				<button type="submit">Submit User</button>
+          </div>
+		</form>
+		<script src="addscript.js"></script>
+   </body>
+</html>
