@@ -1,0 +1,16 @@
+a.
+	i. React is composable in that it is made up of a tree of components that are broken down and rendered by React. This is important because it gives the application a cohesive structure
+	and yields a great deal of readability.
+	ii. JSX is an XML-like syntax that is broken down by React into plain JavaScript. The compiler will turn HTML tags into React.createElement(tagName).
+	iii. Comments are loaded from the server by making an AJAX request, getting JSON data and setting the state to include that data. Comments are created by having the user enter the information
+	in the form; the form then clears, a POST request to the server is submitted (using a similar AJAX function), and the comment list is refreshed. Comments are saved in comments.json as JSON
+	data, and are retrieved when the page is rendered.
+
+b.
+	i. The page automatically makes the changes to the comments that I make in the file. This is because it is set to do the AJAX call every two seconds, so that the comments can be updated
+	and displayed in real time.
+	ii. It doesn't call render() because render() should always be the last function in a React document.
+	iii. The components should always represent the current state of view because it makes it far more understandable and readable; if someone needed to work on this code later, he/she could 
+	easily understand the structure of the comments and could get started working right away.
+	iv. I think it is okay to be optimistic as long as you have thoroughly tested that your request works, as well as having a robust system for generating id's for the comment (or whatever it
+	is your request is doing).
