@@ -21,7 +21,7 @@ module.exports = React.createClass({
     return {data: []};
   },
 	componentWillMount() {
-    this.unsubscribe = store.subscribe(() => {
+    this.unsubscribe = store.subscribe((): function {
         this.setState({
             data: store.getState().data
         });
